@@ -1,0 +1,62 @@
+ <!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Portland Area N-Trak</title>
+
+<link rel="stylesheet" href="{% static 'pant/style.css' %}" />
+  <!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+<div id = 'background'>
+    <header>
+        <a HREF="http://www.nmra.org">
+            <!-- **The folowing inline styles need to go into the style sheet -->
+        <IMG SRC= "{% static 'pant/new_nmra_logo_v23.png' %}" ALT="nmra logo" style="float:right; margin-left:10px;" WIDTH=80 HEIGHT=75></a>
+        <a HREF="http://www.ntrak.org">
+        <IMG SRC="{% static 'pant/ntrak_logo_black.jpg' %}" ALT="ntrak logo" style="float:right; margin-left:10px;" WIDTH=110 HEIGHT=45></a>
+      <h1>{{ header_text }}</h1>
+      <h3>{{ subheader_text }}</h3>
+      <div class = "break"></div>
+    </header>
+
+    <nav>
+    <ul>
+        <li><a href="/pant/index">Home</a></li>
+        <li><a href="/pant/links">Other places</a></li>
+        <li><a href="/pant/tour">Layout tour</a></li>    
+        <li><a href="/pant/photos">More Pictures</a></li>
+        <li><a href="/pant/contact">Contact us</a></li>
+        <li><a href="/pant/directions">Directions</a></li>
+        <li> </li>
+        <li><a href="http://www.ntrak.org">N-Trak</a></li>
+        <li><a href="http://www.nmra.org">NMRA</a></li>
+    </ul>
+    </nav>
+
+    <div id= 'container'>
+
+      {% block content %}
+      <p>You are looking at the base template. </p>
+      {% endblock %}
+
+      <p>This line came in from the base template.</p>
+
+    </div>
+
+    <div class = "break"></div>
+
+    <footer>
+    <p>&copy; Gordon Reeder and Portland area N-Trak. All rights reserved.</p>
+    </footer>
+
+</div>
+</body>
+
+</html> 

@@ -1,0 +1,140 @@
+
+header, section, footer, aside, nav, article, figure {
+    display: block;
+    text-align: left;
+    margin: auto;
+}
+
+body{
+}
+
+header{
+    width: 800px;
+
+}
+header h1{
+    font-size: 32pt;
+    color: #ff8000;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+header h3{
+    font-size: 12pt;
+    color: #000000;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+
+nav {
+    width: 800px;
+    background-color: #ff8000;
+    margin-top: 8px;
+}
+nav ul {margin:0; padding:0;
+}
+nav ul li {
+    display:inline; 
+    margin: 2px 12px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+nav a:link{
+    color: #000000;
+    font-size: 14px;
+    text-decoration:none;
+    font-weight: bold;
+}
+
+nav a:visited{
+    color: #000000;
+    font-size: 14px;
+    text-decoration:none;
+    font-weight: bold;    
+}
+
+nav a:hover{
+    color:#444444;
+    font-size: 14px;
+    text-decoration:none;
+    font-weight: bold;
+}
+
+nav a:active{
+    color: #000000;
+    font-size: 14px;
+    text-decoration:none;
+    font-weight: bold;
+}
+
+footer{
+    width: 800px;
+    background-color: #ff8000;
+}
+
+section{
+
+} 
+
+section p {
+    font-size:12pt;
+    font-family:Arial, Helvetica, sans-serif;
+}
+section h1 {
+    font-size: 24pt;
+    color: #008040;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+section h3 {
+    font-size: 12pt;
+    color: #000000;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0
+}
+
+#background{
+    text-align: center;
+    width: 100%;
+}
+
+#container{
+    width: 800px;
+    display: block;
+    text-align: left;
+    margin: auto;
+}
+
+#leftside{
+    display: inline;
+    width: 360px;
+    float: left;
+    padding: 10px;
+}
+
+#rightside{
+    display: inline;
+    width: 370px;
+    float: right;
+    padding: 10px;
+}
+
+.break {
+    font-size: 0;
+    width: 0; height: 0;
+    clear: both;
+}
+
+.credit{
+    font-size: 10pt; 
+    color: #000000; 
+    font-family: Arial, Helvetica, sans-serif;
+}
