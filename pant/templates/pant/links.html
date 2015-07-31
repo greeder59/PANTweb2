@@ -1,0 +1,23 @@
+{% extends "pant/base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+    
+<section>
+    <br>
+
+    {% if links %}
+        {% for item in links %}
+        {% ifchanged %}<h2>{{item.category}}:</h2> {% endifchanged %}
+        <b><a href="{{item.url}}">{{item.title}}:</a></b> {{item.description}}</br><br>
+        {% endfor %}
+        
+    {% else %}
+        <strong>No links Found.</strong>
+    {% endif %}
+
+</section>
+
+<div class = "break"></div>
+{% endblock %}

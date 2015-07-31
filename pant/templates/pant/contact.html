@@ -1,0 +1,30 @@
+{% extends "pant/base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+    
+<section>
+    <br>
+    <p>Use this form to contact the club officers with questions, suggestions, or requests for information. 
+        One (or several) of us will get back to you shortly. The web master also monitors this form, so you
+        can also report site related issues here.</p>
+
+    {% if form.errors %}
+        <p style="color: red;">
+            Please correct the error{{ form.errors|pluralize }} below.
+        </p>
+    {% endif %}
+
+    <form action="" method="post">
+        <table>
+            {{ form.as_table }}
+        </table>
+        {% csrf_token %}
+        <input type="submit" value="Submit">
+    </form>
+
+</section>
+
+<div class = "break"></div>
+{% endblock %}

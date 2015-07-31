@@ -11,6 +11,7 @@ Be sure to include this URL Configuration into PANTweb2/urls.py.
 
 from django.conf.urls import include, url
 from pant import views
+#OR from . import views
 
 urlpatterns = [
     url(r'^$', views.index),

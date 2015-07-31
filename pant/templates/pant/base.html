@@ -10,17 +10,17 @@
   <!--[if lt IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
   <![endif]-->
+  {% block extrahead %}
+  {% endblock %}
 </head>
 
 <body>
 
 <div id = 'background'>
     <header>
-        <a HREF="http://www.nmra.org">
-            <!-- **The folowing inline styles need to go into the style sheet -->
-        <IMG SRC= "{% static 'pant/new_nmra_logo_v23.png' %}" ALT="nmra logo" style="float:right; margin-left:10px;" WIDTH=80 HEIGHT=75></a>
-        <a HREF="http://www.ntrak.org">
-        <IMG SRC="{% static 'pant/ntrak_logo_black.jpg' %}" ALT="ntrak logo" style="float:right; margin-left:10px;" WIDTH=110 HEIGHT=45></a>
+      {% block extraheader %}
+      {% endblock %}
+      
       <h1>{{ header_text }}</h1>
       <h3>{{ subheader_text }}</h3>
       <div class = "break"></div>
@@ -46,7 +46,9 @@
       <p>You are looking at the base template. </p>
       {% endblock %}
 
+      <!-- Lines placed here will be included in every page that extends from this base template
       <p>This line came in from the base template.</p>
+    -->
 
     </div>
 

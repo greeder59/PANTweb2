@@ -1,0 +1,47 @@
+{% extends "pant/base.html" %}
+
+{% load staticfiles %}
+
+{% block extrahead %}
+<!-- This is a cut and paste from the Google maps tutorial.
+ -->
+
+    <style>
+      #map-canvas {
+        width: 800px; 
+        height: 550px;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('map-canvas');
+        var mapOptions = {
+          center: new google.maps.LatLng(45.4801071, -122.741154),
+          zoom: 14,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions)
+        var marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(45.4801071, -122.741154)})
+        var infowindow = new google.maps.InfoWindow({content:"<b>Alpenrose Dairy and PDX area Ntrak</b><br/> 6149 SW Shattuck Rd<br/>97221 Portland" })
+        google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);})
+        infowindow.open(map,marker);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+{% endblock %}
+  
+{% block content %}
+  <section>
+    <br>
+    <p>We are located in the Dairyville Village behind Alpenrose Dairy, which is in the Raleigh Hills neighborhood west of Portland.
+    Enter at the lower gate at the field. If there is an event going on, you will have to park in the field and walk in. Otherwise,
+    you can drive in and turn left around the Little League ball field and proceed up to the main driveway. Park in the small
+    lot near the restrooms. Dairyville Village is through the gate to your right. We are in the corner behind the pavilion. The HO
+    model railroad club is in the other corner.</p>
+    <div id="map-canvas"></div>
+
+  </section>
+  <div class = "break"></div>
+{% endblock %}
+  

@@ -4,6 +4,8 @@ from django.db import models
 
 class Category(models.Model):
     name = models.CharField(max_length=128, unique=True)
+    # **At some point we need to uncomment the next line and migrate it into the database.
+    # sequence = models.IntegerField(default=0)
 
     def __str__(self):
         return self.name
@@ -22,8 +24,10 @@ class Link(models.Model):
 
 class Announcement(models.Model):
     headline = models.CharField(max_length=128)
-    ann_text = models.TextField('Announcement text', max_length=4096)
+    ann_text = models.TextField('Announcement text', max_length=4096) #shorten to 1024
     show_this = models.BooleanField(default=True)
+    # **At some point we need to uncomment the next line and migrate it into the database.
+    # sequence = models.IntegerField(default=5)
 
     def __str__(self):
         return self.headline        

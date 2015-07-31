@@ -21,5 +21,6 @@ from pant import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.index),
+    url(r'^index/$', views.index),
     url(r'^pant/', include(pant_urls)),
 ]
